@@ -1,1 +1,1 @@
-Goal: UPload the Baekjun solving code every day.
+Goal: Upload the Baekjun solving code every day.
