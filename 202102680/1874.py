@@ -2,7 +2,7 @@ n = int(input())
 stack = []
 answer = []
 cur = 1
-a = 0
+a = 1
 for i in range(n):
     inp = int(input())
     while cur <= inp:
@@ -15,9 +15,9 @@ for i in range(n):
         answer.append("-")
     else:
         print("NO")
-        a = 1
+        a = 0
         break
 
-if a == 0:
+if a == 1:
     for elem in answer:
         print(elem)
