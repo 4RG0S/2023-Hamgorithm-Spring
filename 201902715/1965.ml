@@ -13,7 +13,7 @@ let solve box_sizes =
   Array.fold_left max 0 dp
 
 
-(* let _ =  *)
-let n = read_int ()
-let li = List.init n (fun _ -> Scanf.scanf " %d" (fun x -> x))
-(* Format.printf "%d" (solve li) *)
+let _ = 
+  let n = read_int () in
+  let li = List.init n (fun _ -> Scanf.scanf " %d" (fun x -> x)) in
+  Format.printf "%d" (solve li)
