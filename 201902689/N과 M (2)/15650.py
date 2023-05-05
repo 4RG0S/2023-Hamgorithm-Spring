@@ -1,5 +1,4 @@
 n, m = map(int, input().split(' '))
-visited = [False] * (n + 1)
 result = []
 
 def dfs(start):
