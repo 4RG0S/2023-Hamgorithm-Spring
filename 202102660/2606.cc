@@ -7,19 +7,24 @@ using namespace std;
 
 vector<int> visiting(101, 0);
 
-int search(vector<vector<int>>& vec, int from, int count, int n, deque<int> &q) {
-    q.push_back(from);
+int search(vector<vector<int>>& vec, int from, int count, int n, queue<int> &q) {
+    q.push(from);
     visiting[from] = 1;
 
-    for (int i=1; i < vec[from].size(); i++) {
-        int to = vec[from][i];
-        if (visiting[to] == 0) {
-            count = search(vec, to, count, n, q);
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+        count++;
+        for (int i = 0; i < vec[cur].size(); i++) {
+            int next = vec[cur][i];
+            if(visiting[next] == 0) {
+                visiting[next] = 1;
+                q.push(next);
+            }
         }
+
     }
-    q.pop_back();
-    count++;
-    return count;
+    return count-1;
 }
 
 int main() {
@@ -28,7 +33,7 @@ int main() {
     // 더이상 없으면 큐에서 뺌 -> 뺄 때마다 count
     int count=0;
     int n, m;
-    deque<int> q;
+    queue<int> q;
 
     cin >> n >> m;
     vector<vector<int>> nodes(n+1);
@@ -42,7 +47,7 @@ int main() {
     from = 1;
 
     count = search(nodes, from, count, n, q);
-    cout << count-1 << '\n';
+    cout << count << '\n';
 
     return 0;
 }
