@@ -1,8 +1,10 @@
-n, m = map(int, input().split())
-arr = [[] for i in range(n)]
+arr = []
 
-for j in range(n):
-    arr[j].append(input())
+for i in range(1, 31):
+    arr.append(i)
 
-for k in range(n):
+for j in range(28):
+    arr.remove(int(input()))
+
+for k in range(len(arr)):
     print(arr[k])
