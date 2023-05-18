@@ -7,12 +7,14 @@ for i in range(n):
     for j in range(len(arr)):
         arr[j] = int(arr[j])
     
-    print(arr)
     result = i + sum(arr)
     
     if result == n:
         print(i)
         break
     
+    elif i == n-1:
+        print(0)
+
     else:
         continue
