@@ -2,13 +2,13 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
+nums = [int(input()) for _ in range(N)]
 
 stack = []
 result = []
 now = 1
 isTrue = True
-for _ in range(N):
-    num = int(input())
+for num in nums:
     while now <= num:
         stack.append(now)
         result.append('+')
