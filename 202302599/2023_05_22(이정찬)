@@ -13,3 +13,4 @@ a = int(input())
 for i in range(a) :
     A = list(map(int, input().split()))
     print(fact(A[1]) // (fact(A[1]-A[0])*fact(A[0])))
+    
