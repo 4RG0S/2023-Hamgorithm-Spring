@@ -1,0 +1,43 @@
+a = int(input())
+
+
+for i in range(a) :
+    A = list(map(int, input().split()))
+    obj = A[1]-1
+    result = 0
+    n = 0
+    k = 0
+    
+
+    while True :
+        B = [k-1 , k , k+1]
+        for j in range(len(B)) :
+            if A[0] + B[j] == obj :
+                result += 2
+                n = j
+                print(result)
+                break
+
+        if A[0] + B[n] == obj :
+            break
+
+        tem_B = B[2]
+        k = k+1
+        result += 1
+
+        for j in range(len(B)) :
+            if B[j] == obj :
+                break
+
+        for j in range(len(B)) :
+            if A[0] + B[j] == obj :
+                result += 2
+                n = j
+                print(result)
+                break
+
+        if A[0] + B[n] == obj :
+            break
+
+
+        obj -= tem_B
