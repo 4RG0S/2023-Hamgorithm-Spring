@@ -26,4 +26,5 @@ int main() {
     for(int i = 0; i < N; i++) {
         std::printf("%d" " %d\n", coord[i].first, coord[i].second);
     }
+    return 0;
 }
