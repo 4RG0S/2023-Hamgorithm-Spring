@@ -1,0 +1,31 @@
+A, B = map(int, input().split())
+
+
+key = 0
+while (True) :
+
+    if B > 100 :
+        print("-1")
+        break
+    
+
+    if A < 100000 :
+        for i in range(A):
+            if ((B*(2*i + (B-1)))/2) == A :
+                key = 1
+                for j in range(0,B) :
+                    print(i+j, end= " ")
+                break
+    else :
+        for i in range(int((A/B)-100),int(A/B+100)):
+            if ((B*(2*i + (B-1)))/2) == A :
+                key = 1
+                for j in range(0,B) :
+                    print(i+j, end= " ")
+                break
+
+
+    if key == 1 :
+        break
+
+    B += 1
