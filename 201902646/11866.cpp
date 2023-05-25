@@ -21,5 +21,5 @@ int main() {
         person.pop();
     }
     std::cout << ">";
-
+    return 0;
 }
