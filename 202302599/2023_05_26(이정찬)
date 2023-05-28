@@ -1,0 +1,53 @@
+C = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+A = []
+
+
+a = 0
+
+key = 0
+
+result = 0
+
+for i in range(C[0]):
+    A.append(i+1)
+
+
+while True:
+    for i in range(len(B)) :
+        key = 0
+        
+        if A[0] != B[i] :
+            if A.index(B[i]) > int((len(A)/2)) :
+                while True :
+                    a = A.index(B[i])
+                    A.insert(0,A[len(A)-1])
+                    A.pop()
+                    result += 1
+
+                    if A[0] == B[i] :
+                        A.remove(A[0])
+                
+                        key = 1
+                    if key == 1 :
+                        break
+            else :
+                while True :
+                    a = A.index(B[i])
+                    A.append(A[0])
+                    A.remove(A[0])
+                    
+                    result += 1
+                    if A[0] == B[i] :
+                        A.remove(A[0])
+                        
+                        key = 1
+                    if key == 1 :
+                        break
+        else :
+            A.remove(A[0])
+            
+    break
+
+print(result)
