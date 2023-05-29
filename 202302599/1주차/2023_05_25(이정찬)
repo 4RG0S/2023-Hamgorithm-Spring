@@ -1,13 +1,11 @@
 A, B = map(int, input().split())
 
-
 key = 0
 while (True) :
 
     if B > 100 :
         print("-1")
-        break
-    
+        break 
 
     if A < 100000 :
         for i in range(A):
