@@ -1,0 +1,32 @@
+A = int(input())
+B = list(map(int, input().split()))
+chance = int(input())
+
+temp = B[:]
+    
+for i in range(len(B)-1) :
+    check = []
+    for j in range(i+1,len(B)) :
+        if B[i] < B[j] :
+            check.append(B[j])
+
+    check_temp = check[:]
+
+    for j in range(len(check)) :
+        if B.index(check[j]) - i > chance :
+            check_temp.remove(check[j])
+
+    check = check_temp[:]
+    check.sort(reverse=True)
+
+    if len(check) == 0 :
+        check = []
+    else :
+        chance -= B.index(check[0]) - i
+        B.remove(check[0])
+        B.insert(i,check[0])
+            
+    if chance == 0 :
+        break
+
+print(*B)
