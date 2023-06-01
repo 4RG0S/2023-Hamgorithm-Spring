@@ -21,7 +21,7 @@ def dijkstra(start):
     heapq.heappush(heap, (0, start))
     while heap:
         now_dist, now = heapq.heappop(heap)
-        # 현재까지 계산한 거리가 현재 cost보다 작으면 다음 원소 확인
+        # Heap에서 꺼내졌을 때 이 힙을 추가했을때보다 이미 다른곳에서 최단거리가 줄어들었으면 넘어간다.
         if distance[now] < now_dist:
             continue
 
