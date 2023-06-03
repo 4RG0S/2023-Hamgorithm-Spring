@@ -6,22 +6,21 @@
 
 -- CPP File Location  --
 
-~/coding/cppProject/src/
+/home/bitwise/codingTest/cppProject/src/
 
 
 -- JAVA File Location --
 
-~/coding/javaProject/
-
+/home/bitwise/codingTest/javaProject/src/main/java/baekjoon
 
 -- PYTHON File Location --
 
-~/coding/pythonProject/
+/home/bitwise/codingTest/pythonProject/
 
 
 -- OCAML File Location --
 
-~/coding/ocamlProject/
+/home/bitwise/codingTest/ocamlProject/
 
 */
 
@@ -32,7 +31,7 @@
 
 const std::string DESTINATION_LOC = "/home/bitwise/git-repository/2023-Spring-Hamgorithm/202102653/";
 const std::string CPP_CODES_LOC = "/home/bitwise/codingTest/cppProject/src/";
-const std::string JAVA_CODES_LOC = "/home/bitwise/codingTest/javaProject/";
+const std::string JAVA_CODES_LOC = "/home/bitwise/codingTest/javaProject/src/main/java/baekjoon/bj_";
 const std::string PYTHON_CODES_LOC = "/home/bitwise/codingTest/pythonProject/";
 const std::string OCAML_CODES_LOC = "/home/bitwise/codingTest/ocamlProject/";
 
