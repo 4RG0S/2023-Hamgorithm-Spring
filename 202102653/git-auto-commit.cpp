@@ -104,7 +104,7 @@ void exec_menu1() {
         }
     }
 
-    std::string commitMessage = "Solved" + problem_number + " - " + getCurrentDateTime();
+    std::string commitMessage = "Solved " + problem_number + " - " + getCurrentDateTime();
 
     system("git add .");
     system(("git commit -m \"" + commitMessage + "\"").c_str());
