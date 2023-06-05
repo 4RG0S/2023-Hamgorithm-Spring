@@ -13,7 +13,27 @@
 
 ### cpp 파일이므로, 컴파일은 다음 명령어를 통해 진행하시면 됩니다.
 
+c++17 문법을 따르기 때문에 컴파일 명령어를 지켜주셔야 정상 컴파일됩니다.
+
 $ g++ -std=c++17 -o {program Name} copyFile.cpp 
+
+
+## git-auto-commit 프로그램 개요
+
+$ git add .
+$ git commit -m "New commit in {현재 날짜 및 시간}"
+$ git push
+
+위 3가지의 명령어를 순차적으로 자동 실행해주는 프로그램입니다.
+저것마저도 치기 귀찮아서 제작해 보았습니다.
+
+### commit 메시지가 맘에 안 든다면?
+git-auto-commit.cpp의 명령어 부분을 손보면 자신만의 커밋 메시지 양식을 만들 수 있습니다!
+
+### cpp 파일이므로, 컴파일은 다음 명령어를 통해 진행하시면 됩니다.
+
+$ g++ -o {program Name} git-auto-commit.cpp
+
 
 ## 제작자
 
