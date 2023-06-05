@@ -115,7 +115,8 @@ void exec_menu1() {
 void exec_menu2() {
     std::string commitMessage;
     std::cout << "Please enter your own commit message: ";
-    std::cin >> commitMessage;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');    
+    getline(std::cin, commitMessage);
 
     system("git add .");
     system(("git commit -m \"" + commitMessage + "\"").c_str());
@@ -128,7 +129,7 @@ int main(void) {
     
     Select_menu:
     
-    std::cout << "menu list : menu 1 - copy file & commit & push //  menu 2 - only commit & push";
+    std::cout << "menu 1 - copy file & commit & push\nmenu 2 - only commit & push\n";
     std::cout << "Please enter menu number: ";
     std::cin >> menu_number;
 
