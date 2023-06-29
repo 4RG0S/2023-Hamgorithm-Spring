@@ -1,3 +1,5 @@
+from collections import deque
+
 n = int(input())
 node = [[] for _ in range(n+1)]
 
@@ -7,15 +9,22 @@ for _ in range(n-1):
     node[b].append(a)
 
 
-visited = [0] * (n+1)
+visited = [False] * (n+1)
+ans = [0]*(n+1)
 
-def dfs(p):
-    for a in node[p]:   # node[i] 안에 j가 저장돼있다면 i와 j 가 연결되어있다고 가정
-        if visited[a] == 0:     # j를 방문을 하지 않았다면
-            visited[a] = p  # 부모 노드인 i를 visited에 저장
-            dfs(a)
+def bfs(node, v, visited):
+    que = deque([v])    #큐 생성
+    visited[v] = True   #방문한 노드 true로 바꿔주기
+    while que:  #큐 있을 때
+        x = que.popleft()   #맨 처음에 들어온 거 pop
+        for i in node[x]:   #노드 안 싹 탐색
+            if not visited[i]:  #방문 안했던거면
+                ans[i] = x      #부모노드 저장
+                que.append(i)   #큐에 넣어줌(탐색하라고
+                visited[i] = True   #이미 방문했다고 설정
 
 
-dfs(1)      # 트리의 루트부터 시작
+bfs(node,1,visited) # 트리의 루트부터 시작
+
 for i in range(2, n+1):
-    print(visited[i])
+    print(ans[i])
