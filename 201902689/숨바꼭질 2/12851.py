@@ -26,7 +26,7 @@ def bfs(n):
                     visited[i][0] = visited[now][0] + 1
                     visited[i][1] = visited[now][1]
                 elif visited[i][0] == visited[now][0] + 1: # 같은 시간이 걸리는 다른 방법인 경우
-                    visited[i][1] += visited[now][1] # 방법이 하나 더 있음을 갱신해줌
+                    visited[i][1] += visited[now][1] # 방법이 여러 개 있으면 각 경우의 수를 더해줌
 
 bfs(n)
 print(visited[k][0])
