@@ -3,7 +3,6 @@ B = list(map(int, input().split()))
 
 A = []
 
-
 a = 0
 
 key = 0

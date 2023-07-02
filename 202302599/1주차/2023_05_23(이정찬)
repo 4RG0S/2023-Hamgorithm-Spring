@@ -1,7 +1,6 @@
 a = int(input())
 A = []
 
-
 for t in range(a) :
     B = list(map(int, input().split()))
     obj = B[1] - B[0]
