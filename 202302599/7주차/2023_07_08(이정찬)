@@ -1,0 +1,21 @@
+import heapq
+import sys
+
+N = int(sys.stdin.readline())
+
+heap = []
+
+for _ in range(N) :
+
+    heap.append(list(map(int,input().split())))
+
+    for i in range(N) :
+        heap[len(heap)-1][i] = [-heap[len(heap)-1][i],heap[len(heap)-1][i]]
+
+max_heap = sum(heap,[])
+
+for _ in range(N-1) :
+    heapq.heapify(max_heap)
+    heapq.heappop(max_heap)
+
+print(max_heap[0][1])
