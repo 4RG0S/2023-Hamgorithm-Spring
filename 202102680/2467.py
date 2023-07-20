@@ -26,6 +26,7 @@ for i in range(n-1):
             end = mid - 1       # 크니까 더 작은 값을 더해보기 위해 end를 mid - 1 값으로 설졍
 
 print(liquid[left], liquid[right])
+
 ######## 이건 투 포인터로 푼 것 #########
 n = int(input())
 liquid = list(map(int, input().split()))
