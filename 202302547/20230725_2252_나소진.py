@@ -1,6 +1,6 @@
 import sys
 from collections import deque
- 
+  
 input = sys.stdin.readline
 n, m  = map(int,input().split()) # 학생 번호(노드의 개수), 비교 회수(간선의 개수)
 indegree = [0] * (n+1) # 진입차수를 저장할 배열
